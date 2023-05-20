@@ -1,0 +1,288 @@
+/* i have also used tailwind */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  margin: 0;
+}
+
+.hide-on-desktop {
+  display: none; 
+}
+
+:root {
+  --primary-color: #3A3F5C;
+  --secondary-color: #5bb859;
+  --accent-color: #f8f8f8;
+  --black: #000000;
+  --grey: #dddddd;
+  --white: #ffffff;
+  --text: #463d3d;
+  --pri-font: 'Rubik', sans-serif;;
+  --sec-font: 'Roboto', sans-serif;
+}
+
+.pri-color {
+  color: var(--primary-color);
+}
+
+.sec-color {
+  color: var(--secondary-color);
+}
+
+.bg-pri-color {
+  background-color: var(--primary-color);
+}
+
+.bg-sec-color {
+  background-color: var(--secondary-color);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-black {
+  background-color: var(--black);
+}
+
+.bg-sec {
+  background-color: #fafafa;
+}
+
+.white-color {
+  color: var(--white);
+}
+
+.black-color {
+  color: var(--black);
+}
+
+.pri-font {
+  font-family: var(--pri-font);
+}
+
+.sec-font {
+  font-family: var(--sec-font); 
+}
+
+.font-30 {
+  font-size: 30px;
+}
+
+.font-20 {
+  font-size: 20px;
+}
+
+.font-16 {
+  font-size: 16px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+.width-12 {
+  width: 1200px;
+}
+
+.line-height {
+  line-height: 1.7;
+}
+
+.nav-link a:hover {
+  color: var(--secondary-color);
+}
+
+.btn-grad {
+ background-image: linear-gradient(to right, #8DDE8B 0%, #4DBC4B  51%,  #4DBC4B  100%);
+ border-radius: 25px;
+ padding: 12px 32px;
+ text-align: center;
+ transition: 0.5s;
+ background-size: 200% auto;
+ color: var(--white);
+ display: block;
+ border: 0px;
+ font-family: var(--pri-font);
+ font-size: 16px;
+ cursor: pointer;
+}
+
+.btn-grad:hover {
+ background-position: right center; /* change the direction of the change here */
+ color: #fff;
+ text-decoration: none;
+}
+
+.sec-1 {
+ background-image: url('https://i.postimg.cc/9f6PTp5X/abstract-blue-geometric-shapes-background.jpg');
+  background-size: cover;
+  margin: 0; 
+  
+}
+
+.hero-img {
+  height: 500px;
+  margin: 40px auto 0;
+}
+
+.img-animation {
+  position: absolute;
+  animation-name: mover;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.img-position-1 {
+  height: 100px;
+  top: 80px;
+}
+
+.img-position-2 {
+  height: 100px;
+  top: 300px;
+  right: -30px;
+}
+
+.img-position-3 {
+  height: 100px;
+  bottom: -5px;
+  
+}
+
+.mt-15 {
+  margin-top: -15px;
+  
+}
+
+@keyframes mover {
+  0% {transform: translateY(-30px);}
+  50% {transform: translateY(-50px);}
+  100% {transform: translateY(-30px);}
+}
+
+.sec3-1 {
+ background-image: url('https://i.postimg.cc/kXHT9jSY/tortilla-wrap-with-falafel-fresh-salad-vegan-tacos-vegetarian-healthy-food-top-view.jpg') 
+}
+
+.sec3-2 {
+ background-image: url('https://i.postimg.cc/MGqV8R9r/dietary-menu-healthy-vegan-salad-vegetables-broccoli-mushrooms-spinach-quinoa-bowl-flat-lay-top-view.jpg') 
+}
+
+.sec5-bg {
+  background-image: url('https://i.postimg.cc/05FF5Wqv/plate-with-paleo-diet-food-boiled-eggs-avocado-cucumber-nuts-cherry-strawberries-paleo-breakfast-top.jpg')
+}
+
+@media screen and (max-width: 600px) {
+  
+  .hide-on-mobile {
+    display: none;
+  }
+  
+  .width-mb {
+    width: 100% !important;
+  }
+  
+  .hide-on-desktop {
+    display: block;
+  }
+  
+  .display-block {
+    display: block !important;
+  }
+  
+  .sidebar-menu {
+  position: fixed;
+  width: 70%;
+  height: 100vh;
+  background: rgba(0,0,0,10);
+  -webkit-backdrop-filter: blur(10px);
+  top: 0;
+  padding: 0px 20px;
+  transform: translateX(-100%);
+  transition: all .4s;
+  z-index: 9999;
+}
+  
+  .sidebar-menu-show-hide{
+    transform: translateX(0px) !important;
+  }
+
+  .mobile-menu-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  .close-icon {
+  color: var(--white);
+  font-size: 35px !important;
+  }
+  
+.side-title-sidebar{
+  font-size: 25px !important;
+  color: var(--white) !important;
+  font-family: var(--pri-font);
+  }
+
+.site-title-2 {
+  font-size: 25px;
+  color: var(--secondary-color) !important;
+  font-family: var(--pri-font);
+}
+  
+.sidebar-menu-link {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background: rgba(0,0,0,.4);
+  margin: 40px 0;
+  box-shadow: inset 0 3px 10px #000;
+
+}
+  
+.sidebar-menu-link h4 {
+  font-size: 18px;
+  color: var(--white);
+  font-weight: 400;
+  font-family: var(--pri-font);
+  margin: 0;
+}
+ 
+  .grid-col-1 {
+    display: grid;
+    grid-template-columns: 1fr !important;
+  }
+  
+.width-full {
+  width: 100% !important;
+}
+  
+  .plr-20 {
+    padding-left: 20px;
+    padding-right: 20px;
+  } 
+  
+  .justify-unset {
+    justify-content: unset;
+  }
+ 
+.img-position-1 {
+  height: 70px;
+}
+
+.img-position-2 {
+  height: 70px;
+  right: -20px;
+}
+
+.img-position-3 {
+  height: 70px;
+}
+}
